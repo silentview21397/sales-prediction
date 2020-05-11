@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UkZ3hwymSseuW7q5qBO6jNjJRC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -165,8 +169,8 @@
     <state x="221" y="73" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1587196937231" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.826@0.23.1440.826" timestamp="1587135116428" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.828@0.23.1440.828" timestamp="1586967132094" />
-    <state x="376" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1589014749840">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="376" y="271" key="com.intellij.ide.util.TipDialog" timestamp="1589212777588">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="376" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.815@0.23.1440.815" timestamp="1585241754063" />
     <state x="376" y="269" key="com.intellij.ide.util.TipDialog/0.23.1440.822@0.23.1440.822" timestamp="1587452873374" />
@@ -177,6 +181,7 @@
     <state x="376" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1589014478811" />
     <state x="376" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1588830339732" />
     <state x="376" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1588403839303" />
+    <state x="376" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.830@0.23.1440.830" timestamp="1589212777588" />
     <state x="376" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.832@0.23.1440.832" timestamp="1587213887687" />
   </component>
 </project>
