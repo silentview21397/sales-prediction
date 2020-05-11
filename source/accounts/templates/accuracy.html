@@ -1,0 +1,89 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+<h4>{% trans 'House Price Prediction' %}</h4>
+
+{% csrf_token %}
+<div align="center">
+    <form method="get" action=" {% url 'accounts:accuracyTest' %}" class="form-control">
+
+        Accuracy Test
+        <!--owner_name', 'price_range','building_floors_square_feet','zone_category','distance_from_road','total_area_covered','room_type','population_in_area',-->
+        <!--'house_rating','material_rating','room_type','neighbourhood_class','year_built','year_rebuilt','roof_material','basement_quality','heating','bathroom_type','kitchen_quality','house_image','room_image'-->
+        <!---->
+
+
+        <div class="form-control">
+
+
+            <div>
+
+
+
+
+    {% if output_gb %}
+                  <label class="required">Accuracy Gaussian Naivebayes:{{ output_gb }}</label>
+                <br>
+                  <label class="required">Accuracy SVM:{{ output_svm }}</label>
+                  {%endif%}
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <input type="submit" value="Check Accuracy" class="btn-primary"/>
+
+        <br>
+        </table>
+
+    </form>
+</div>
+
+<center>
+
+    {% csrf_token %}
+    <style>
+    @-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.carousel-inner .item > img {
+  -webkit-animation: zoom 20s;
+  animation: zoom 20s;
+}
+
+
+    </style>
+
+
+
+
+
+
+
+    </center>
+
+    {% endblock %}

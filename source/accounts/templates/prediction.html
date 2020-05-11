@@ -1,0 +1,359 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+<h4>{% trans 'House Price Prediction' %}</h4>
+
+{% csrf_token %}
+<div align="center">
+    <form method="get" action=" {% url 'accounts:predictHouse' %}" class="form-control">
+
+        Predict House
+        <!--owner_name', 'price_range','building_floors_square_feet','zone_category','distance_from_road','total_area_covered','room_type','population_in_area',-->
+        <!--'house_rating','material_rating','room_type','neighbourhood_class','year_built','year_rebuilt','roof_material','basement_quality','heating','bathroom_type','kitchen_quality','house_image','room_image'-->
+        <!---->
+
+
+        <div class="form-control">
+
+
+            <div>
+
+
+
+
+    {% if output %}
+                  <label class="required">Price range:{{ output }}</label>
+                  {%endif%}
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_building_floors_square_feet">Building floors square feet:</label>
+
+                <input type="number" name="building_floors_square_feet" value="200" class="vIntegerField" min="0"
+                       required id="id_building_floors_square_feet">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_zone_category">Zone category:</label>
+
+                <select name="zone_category" id="id_zone_category">
+                    <option value="1" selected>Rural</option>
+
+                    <option value="2">Urban</option>
+
+                </select>
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_distance_from_road">Distance from road:</label>
+
+                <input type="number" name="distance_from_road" value="1" class="vIntegerField" min="0" required
+                       id="id_distance_from_road">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_total_area_covered">Total area covered:</label>
+
+                <input type="number" name="total_area_covered" value="300" class="vIntegerField" min="0" required
+                       id="id_total_area_covered">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_population_in_area">Population in area:</label>
+
+                <input type="number" name="population_in_area" value="1000" class="vIntegerField" min="0" required
+                       id="id_population_in_area">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_house_rating">House rating:</label>
+
+                <input type="number" name="house_rating" value="8" class="vIntegerField" min="0" required
+                       id="id_house_rating">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_material_rating">Material rating:</label>
+
+                <input type="number" name="material_rating" value="8" class="vIntegerField" min="0" required
+                       id="id_material_rating">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_room_type">Room type:</label>
+
+                <select name="room_type" id="id_room_type">
+                    <option value="1" selected>1 BHK</option>
+
+                    <option value="2">2 BHK</option>
+
+                    <option value="3">3 BHK</option>
+
+                </select>
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_neighbourhood_class">Neighbourhood class:</label>
+
+                <select name="neighbourhood_class" id="id_neighbourhood_class">
+                    <option value="1" selected>Poor</option>
+
+                    <option value="2">Medium Class</option>
+
+                    <option value="3">Rich</option>
+
+                    <option value="4">Very Rich</option>
+
+                </select>
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_year_built">Year built:</label>
+
+                <input type="number" name="year_built" value="2000" class="vIntegerField" min="0" required
+                       id="id_year_built">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_year_rebuilt">Year rebuilt:</label>
+
+                <input type="number" name="year_rebuilt" value="2003" class="vIntegerField" min="0" required
+                       id="id_year_rebuilt">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_roof_material">Roof material:</label>
+
+                <input type="number" name="roof_material" value="5" class="vIntegerField" min="0" required
+                       id="id_roof_material">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_basement_quality">Basement quality:</label>
+
+                <input type="number" name="basement_quality" value="4" class="vIntegerField" min="0" required
+                       id="id_basement_quality">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_heating">Heating:</label>
+
+                <input type="number" name="heating" value="4" class="vIntegerField" min="0" required id="id_heating">
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_bathroom_type">Bathroom type:</label>
+
+                <select name="bathroom_type" id="id_bathroom_type">
+                    <option value="1" selected>Indian</option>
+
+                    <option value="2">Western</option>
+
+                </select>
+
+
+            </div>
+
+        </div>
+
+        <div class="form-control">
+
+
+            <div>
+
+
+                <label class="required" for="id_kitchen_quality">Kitchen quality:</label>
+
+                <input type="number" name="kitchen_quality" value="4" class="vIntegerField" min="0" required
+                       id="id_kitchen_quality">
+
+
+            </div>
+
+        </div>
+
+        <input type="submit" value="Search" class="btn-primary"/>
+
+        <br>
+        </table>
+
+    </form>
+</div>
+
+<center>
+
+    {% csrf_token %}
+    <style>
+    @-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.carousel-inner .item > img {
+  -webkit-animation: zoom 20s;
+  animation: zoom 20s;
+}
+
+
+    </style>
+
+
+
+
+
+
+
+    </center>
+
+    {% endblock %}
